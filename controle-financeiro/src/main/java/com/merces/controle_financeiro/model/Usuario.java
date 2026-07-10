@@ -1,5 +1,6 @@
 package com.merces.controle_financeiro.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,12 +19,11 @@ public class Usuario {
 
     private String nome;
 
+    @Column(unique = true)
     private String email;
 
     private String senha;
 
-    // Guardamos apenas o hash SHA-256 do token de redefinição, nunca o valor original —
-    // assim, mesmo com o banco vazado, ninguém consegue redefinir a senha de alguém.
     private String resetTokenHash;
 
     private LocalDateTime resetTokenExpiracao;
