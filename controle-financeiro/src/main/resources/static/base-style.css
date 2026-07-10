@@ -76,7 +76,7 @@ a {
     display: none !important;
 }
 
-/* Barra de rolagem discreta (Webkit) */
+/* Barra de rolagem*/
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--color-border-strong); border-radius: 10px; }
