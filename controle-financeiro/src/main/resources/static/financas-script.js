@@ -114,11 +114,13 @@ function filtrarEAplicarNaTela() {
         dashboardTitle.textContent = `Movimentações de ${nomesMeses[mesSelecionado]} de ${anoSelecionado}`;
     }
 
-    const transacoesDoMes = todasTransacoes.filter(t => {
-        if (!t.data) return false;
-        const partes = t.data.split('-');
-        return (parseInt(partes[1]) - 1) === mesSelecionado && parseInt(partes[0]) === anoSelecionado;
-    });
+    const transacoesDoMes = todasTransacoes
+        .filter(t => {
+            if (!t.data) return false;
+            const partes = t.data.split('-');
+            return (parseInt(partes[1]) - 1) === mesSelecionado && parseInt(partes[0]) === anoSelecionado;
+        })
+        .sort((a, b) => a.data.localeCompare(b.data));
 
     let entradasDoMes = 0;
     let saidasDoMes = 0;

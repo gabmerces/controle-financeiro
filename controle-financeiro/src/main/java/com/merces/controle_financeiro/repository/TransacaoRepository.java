@@ -9,6 +9,7 @@ import java.util.List;
 @Repository
 public interface TransacaoRepository extends JpaRepository<Transacao, Long> {
 
-    // Filtra as transações, trazendo apenas as que pertencem ao usuário informado
-    List<Transacao> findByUsuarioId(Long usuarioId);
+    // Traz as transações do usuário já ordenadas pela data (da mais antiga para a mais
+    // recente), independentemente da ordem em que foram cadastradas.
+    List<Transacao> findByUsuarioIdOrderByDataAsc(Long usuarioId);
 }

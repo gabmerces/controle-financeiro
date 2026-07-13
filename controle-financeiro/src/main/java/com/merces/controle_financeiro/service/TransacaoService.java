@@ -24,7 +24,7 @@ public class TransacaoService {
     private UsuarioRepository usuarioRepository;
 
     public List<TransacaoResponseDTO> listarPorUsuario(Long usuarioId) {
-        return transacaoRepository.findByUsuarioId(usuarioId).stream()
+        return transacaoRepository.findByUsuarioIdOrderByDataAsc(usuarioId).stream()
                 .map(TransacaoResponseDTO::new)
                 .collect(Collectors.toList());
     }
