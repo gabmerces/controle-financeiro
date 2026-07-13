@@ -10,8 +10,7 @@ Sistema web de controle financeiro pessoal: cadastro de usuário, autenticação
 
 **[Acessar o projeto no ar »](https://controle-financeiro-m282.onrender.com)**
 
-> Hospedado no plano gratuito do Render: o servidor "dorme" após alguns minutos sem uso, então a primeira requisição depois de um tempo parado pode levar de 30 a 60 segundos para responder.
-
+> Hospedado no plano gratuito do Render
 ## Tecnologias
 
 **Back-end**
